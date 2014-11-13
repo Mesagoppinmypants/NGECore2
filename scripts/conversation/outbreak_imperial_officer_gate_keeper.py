@@ -11,14 +11,14 @@ def startConversation(core, actor, npc):
 	convSvc = core.conversationService
 	
 	
-		# The quarantine zone is a restricted area, citizen.
-		core.conversationService.sendConversationMessage(actor, npc, OutOfBand.ProsePackage('@conversation/conversation/gate_keeper_quarantine_zone:s_10'))
+	# The quarantine zone is a restricted area, citizen.
+	core.conversationService.sendConversationMessage(actor, npc, OutOfBand.ProsePackage('@conversation/gate_keeper_quarantine_zone:s_10'))
 		
-		options = Vector()
-		# I have authorization to enter.
-		options.add(ConversationOption(OutOfBand.ProsePackage('@conversation/gate_keeper_quarantine_zone:s_12'), 0))
-		core.conversationService.sendConversationOptions(actor, npc, handleOptionsOne)
-		return
+	options = Vector()
+	# I have authorization to enter.
+	options.add(ConversationOption(OutOfBand.ProsePackage('@conversation/gate_keeper_quarantine_zone:s_12'), 0))
+	core.conversationService.sendConversationOptions(actor, npc, handleOptionsOne)
+	return
 	
 def handleOptionsOne(core, actor, npc, selection):
 	global coreRef
@@ -28,11 +28,11 @@ def handleOptionsOne(core, actor, npc, selection):
 		
 		if selection == 0: 
 				# What? Let me see your authorization code.
-				core.conversationService.sendConversationMessage(actor, npc, OutOfBand.ProsePackage('@conversation/conversation/gate_keeper_quarantine_zone:s_14')
+				core.conversationService.sendConversationMessage(actor, npc, OutOfBand.ProsePackage('@conversation/gate_keeper_quarantine_zone:s_14')
 				
 				options = Vector()
 				# Here...
-				options.add(ConversationOption(OutOfBand.ProsePackage('@conversation/conversation/gate_keeper_quarantine_zone:s_16'), 1)
+				options.add(ConversationOption(OutOfBand.ProsePackage('@conversation/gate_keeper_quarantine_zone:s_16'), 1)
 				convSvc.sendConversationOptions(actor, npc, options, handleOptionsTwo)
 		return
 	
