@@ -1921,8 +1921,6 @@ def instruments(owner, inventory):
 	inventory.add(core.objectService.createObject("object/tangible/instrument/shared_traz.iff", owner.getPlanet()))
 	inventory.add(core.objectService.createObject("object/tangible/instrument/shared_valahorn.iff", owner.getPlanet()))
 	inventory.add(core.objectService.createObject("object/tangible/instrument/shared_xantha.iff", owner.getPlanet()))
-	inventory.add(core.objectService.createObject("object/tangible/instrument/shared_traz.iff", owner.getPlanet()))
-	inventory.add(core.objectService.createObject("object/tangible/instrument/shared_traz.iff", owner.getPlanet()))
 	screenOne(core, owner)
 	return
 
